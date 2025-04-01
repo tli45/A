@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Introduction</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="mechanics.html">Mechanics</a>
+    <a href="skills.html">Ollie Skills</a>
+    <a href="references.html">References</a>
+  </nav>
+</header>
+
+  <main>
+    <h1>Introduction</h1>
+    <textarea placeholder='Describe Ollie here...'></textarea>
+    <div class="nav-controls"><a href="index.html" class="nav-btn">← Back to Home</a> <a href="mechanics.html" class="nav-btn">Next Topic →</a></div>
+  </main>
+  
+<script>
+  // 菜单导航跳转功能（通过 window.location.href）
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("nav a").forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = this.getAttribute("href");
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
